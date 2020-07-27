@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "email api for TarayahWorld",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Othmay/TarayahWorldServer.git"
+  },
+  "author": "Othmay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Othmay/TarayahWorldServer/issues"
+  },
+  "homepage": "https://github.com/Othmay/TarayahWorldServer#readme"
+}
