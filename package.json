@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Othmay/TarayahWorldServer/issues"
   },
-  "homepage": "https://github.com/Othmay/TarayahWorldServer#readme"
+  "homepage": "https://github.com/Othmay/TarayahWorldServer#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
 }
