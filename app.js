@@ -9,12 +9,14 @@ const app = express();
 
 const apiKey = process.env.SENDGRID_API_KEY
 
+const emailClient = process.env.EMAIL_TARAYAH
+
 app.use(bodyParser.json());
 
 app.use(cors());
 
 app.use((req, res, next) => {
-		res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000'); // Change later to only allow our server
+		res.setHeader('Access-Control-Allow-Origin', 'https://tarayah-world.web.app/'); 
 		res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
 		res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 		next();
@@ -28,7 +30,7 @@ app.post('/api/email', (req, res, next) => {
 
 		sendGrid.setApiKey(apiKey);
 		const msg = {
-		to: 'stellaireperso@gmail.com',
+		to: emailClient,
 		from: req.body.email,
 		subject: req.body.subject,
 		text: req.body.content + '\n' + req.body.name,
@@ -47,6 +49,3 @@ app.post('/api/email', (req, res, next) => {
 						});
 				});
 });
-
-//just for test
-app.listen(3030, '0.0.0.0');
